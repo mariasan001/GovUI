@@ -1,0 +1,12 @@
+:root[data-brand="edomex"]{
+  --color-primary-500:#9F2141;
+  --color-primary-600:#7f1a34;
+  --color-neutral-0:#FFFFFF;
+  --color-neutral-900:#0A0A0A;
+  --color-accent-500:#BC945A;
+  --color-accent-300:#DDC7A2;
+}
+:root[data-brand="edomex"][data-theme="dark"]{
+  --color-neutral-0:#0A0A0A;
+  --color-neutral-900:#F5F5F5;
+}

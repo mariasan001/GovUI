@@ -1,0 +1,10 @@
+{
+  "name": "@govui/css-reset",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "files": ["src"],
+  "exports": { "./reset.css": "./src/reset.css" },
+  "style": "src/reset.css"
+}
+

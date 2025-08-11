@@ -1,0 +1,57 @@
+.gov-btn {
+  --_bg: var(--color-neutral-100);
+  --_fg: var(--color-neutral-900);
+  --_bd: var(--color-neutral-300);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  border: 1px solid var(--_bd);
+  background: var(--_bg);
+  color: var(--_fg);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-md);
+  font: var(--font-weight-medium) var(--font-size-md) / var(--font-line-normal)
+    var(--font-family-sans);
+  cursor: pointer;
+  transition: box-shadow 0.15s, transform 0.02s, background 0.15s, color 0.15s,
+    border-color 0.15s;
+}
+.gov-btn:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+.gov-btn:active {
+  transform: translateY(1px);
+}
+.gov-btn:disabled,
+.gov-btn[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.gov-btn:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+.gov-btn--primary {
+  --_bg: var(--color-primary-500);
+  --_fg: #fff;
+  --_bd: var(--color-primary-600);
+}
+.gov-btn--secondary {
+  --_bg: var(--color-neutral-0);
+  --_fg: var(--color-neutral-800);
+  --_bd: var(--color-neutral-300);
+}
+.gov-btn--sm {
+  padding: var(--spacing-1) var(--spacing-3);
+  font-size: var(--font-size-sm);
+}
+.gov-btn--lg {
+  padding: var(--spacing-3) var(--spacing-5);
+  font-size: var(--font-size-lg);
+}
+.gov-btn__icon {
+  inline-size: 1.25em;
+  block-size: 1.25em;
+  display: inline-block;
+}

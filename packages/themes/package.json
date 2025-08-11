@@ -1,0 +1,10 @@
+{
+  "name": "@govui/themes",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "files": ["*.css"],
+  "exports": {
+    "./edomex.css": "./edomex.css"
+  }
+}

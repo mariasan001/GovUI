@@ -1,0 +1,9 @@
+{
+  "name": "@govui/css-core",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "files": ["src"],
+  "exports": { "./core.css": "./src/core.css" },
+  "style": "src/core.css"
+}

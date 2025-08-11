@@ -1,0 +1,22 @@
+# Build / cache
+**/node_modules/
+**/.next/
+**/dist/
+**/.turbo/
+**/storybook-static/
+**/coverage/
+**/*.log
+
+# Env
+.env
+.env.*
+
+# Lockfiles (solo el de la raíz)
+**/pnpm-lock.yaml
+!pnpm-lock.yaml
+
+# IDE / OS
+.vscode/
+.DS_Store
+Thumbs.db
+
