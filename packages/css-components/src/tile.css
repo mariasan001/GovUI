@@ -1,0 +1,51 @@
+/* TILE de galería (tarjeta simple) */
+.gov-tile {
+  display: block;
+  background: var(--color-neutral-0, #fff);
+  border: 1px solid var(--color-neutral-300, #cbd5e1);
+  border-radius: var(--radius-md, 10px);
+  padding: var(--spacing-4, 16px);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.04s;
+
+}
+.gov-tile:hover {
+  border-color: color-mix(
+    in oklab,
+    var(--color-primary-500, #2f6dff) 35%,
+    #fff
+  );
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+.gov-tile:active {
+  transform: translateY(1px);
+}
+.gov-tile:focus-visible {
+  outline: 2px solid var(--color-primary-500, #2f6dff);
+  outline-offset: 3px;
+}
+
+.gov-tile__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2, 8px);
+}
+.gov-tile__title {
+  font-weight: 600;
+}
+.gov-tile__meta {
+  font-size: var(--font-size-sm, 14px);
+  color: var(--color-neutral-800, #1f2937);
+  opacity: 0.8;
+}
+.gov-tile__arrow {
+  inline-size: 18px;
+  block-size: 18px;
+  flex: 0 0 auto;
+  transition: translate 0.15s;
+}
+.gov-tile:hover .gov-tile__arrow {
+  translate: 2px 0;
+}

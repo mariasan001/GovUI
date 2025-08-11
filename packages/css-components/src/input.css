@@ -1,0 +1,59 @@
+/* Contenedor base del field */
+.gov-field{
+  position: relative; /* para posicionar el ícono dentro */
+}
+
+/* Centrar SOLO la variante de búsqueda */
+.gov-field--search{
+  display: block;
+  inline-size: 100%;
+  max-inline-size: 520px;
+  margin-inline: auto;
+}
+
+/* Input con hueco para el icono a la izquierda */
+.gov-field--search .gov-input{ padding-left: 42px; }
+
+/* Ícono (lupa), centrado vertical y estable */
+.gov-input__icon{
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%); /* usar transform, no translate */
+  width: 18px;
+  height: 18px;
+  opacity: .7;
+  pointer-events: none;
+  color: var(--color-neutral-800,#1f2937);
+}
+
+/* INPUT base */
+.gov-input{
+  inline-size: 100%;
+  border: 1px solid var(--color-neutral-300,#cbd5e1);
+  background: var(--color-neutral-0,#fff);
+  color: var(--color-neutral-900,#0b1220);
+  border-radius: var(--radius-md,10px);
+  padding: var(--spacing-2,8px) var(--spacing-4,16px);
+  font: var(--font-weight-medium,500) var(--font-size-md,16px) /
+        var(--font-line-normal,1.5) var(--font-family-sans,system-ui);
+  outline: none;
+  transition: border-color .15s, box-shadow .15s, background .15s;
+}
+
+.gov-input::placeholder{
+  color: var(--color-neutral-800,#1f2937);
+  opacity: .6;
+}
+
+.gov-input:focus-visible{
+  border-color: color-mix(in oklab, var(--color-primary-500,#2f6dff) 60%, #fff);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-primary-500,#2f6dff) 20%, #fff);
+}
+.gov-field{ position: relative; }
+.gov-field--search .gov-input{ padding-left:42px; }
+.gov-input__icon{
+  position:absolute; left:12px; top:50%;
+  transform: translateY(-50%);
+  pointer-events:none; opacity:.7; color: var(--color-neutral-800,#1f2937);
+}

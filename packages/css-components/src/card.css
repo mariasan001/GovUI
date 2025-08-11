@@ -1,0 +1,52 @@
+.gov-card {
+  border: 1px solid var(--color-neutral-300, #cbd5e1);
+  border-radius: var(--radius-md, 10px);
+  background: var(--color-neutral-0, #fff);
+  color: var(--color-neutral-900, #0b1220);
+  padding: var(--spacing-4, 16px);
+  display: block;
+}
+.gov-card--clickable {
+  cursor: pointer;
+  transition: box-shadow 0.15s, transform 0.04s, border-color 0.15s;
+}
+.gov-card--clickable:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.gov-card--clickable:active {
+  transform: translateY(1px);
+}
+.gov-card:focus-within {
+  outline: 2px solid var(--color-primary-500, #2f6dff);
+  outline-offset: 2px;
+}
+
+.gov-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-3, 12px);
+}
+.gov-card__title {
+  font-weight: 600;
+}
+.gov-card__meta {
+  color: var(--color-neutral-800, #1f2937);
+  font-size: var(--font-size-sm, 14px);
+}
+.gov-card__body {
+  margin-block: var(--spacing-3, 12px);
+}
+.gov-card__footer {
+  margin-top: var(--spacing-3, 12px);
+  display: flex;
+  gap: var(--spacing-2, 8px);
+}
+
+.gov-card--emphasis {
+  border-color: color-mix(
+    in oklab,
+    var(--color-primary-500, #2f6dff) 35%,
+    #fff
+  );
+}

@@ -1,0 +1,17 @@
+.gov-alert{
+  --_bg: color-mix(in oklab, var(--color-primary-500,#2f6dff) 8%, #fff);
+  --_bd: color-mix(in oklab, var(--color-primary-500,#2f6dff) 25%, #fff);
+  --_fg: var(--color-neutral-900,#0b1220);
+  display:flex; align-items:flex-start; gap:var(--spacing-3,12px);
+  padding:var(--spacing-3,12px) var(--spacing-4,16px);
+  border:1px solid var(--_bd); border-radius:var(--radius-md,10px);
+  background:var(--_bg); color:var(--_fg);
+}
+.gov-alert__title{ font-weight:600; margin-bottom:2px }
+.gov-alert__desc{ font-size:var(--font-size-sm,14px) }
+.gov-alert__close{ margin-left:auto; background:transparent; border:0; cursor:pointer; padding:2px 6px; border-radius:8px; }
+.gov-alert__close:focus-visible{ outline:2px solid var(--color-primary-500); outline-offset:2px }
+
+.gov-alert--success{ --_bg: color-mix(in oklab, #22c55e 10%, #fff); --_bd: color-mix(in oklab, #22c55e 30%, #fff) }
+.gov-alert--warning{ --_bg: color-mix(in oklab, #f59e0b 12%, #fff); --_bd: color-mix(in oklab, #f59e0b 35%, #fff) }
+.gov-alert--danger { --_bg: color-mix(in oklab, #ef4444 12%, #fff); --_bd: color-mix(in oklab, #ef4444 35%, #fff) }
