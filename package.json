@@ -9,5 +9,11 @@
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.14.0",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
+  }
 }
