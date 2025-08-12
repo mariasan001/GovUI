@@ -86,7 +86,7 @@ export default function Page() {
         style={{ '--grid-gap': '16px', '--tile-min': '240px' } as React.CSSProperties}
       >
         {filtered.map((item) => (
-          <a key={item.key} className="gov-tile" href={`#/${item.key}`}>
+          <a key={item.key} className="gov-tile"  href={`/componentes/${item.slug}`}>
             <div className="gov-tile__row">
               <div>
                 <div className="gov-tile__title">{item.title}</div>

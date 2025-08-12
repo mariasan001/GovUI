@@ -1,5 +1,5 @@
 :root {
-  --container-max: 1200px;
+  --container-max: 1400px;
 }
 body {
   font-size: var(--font-size-md, 16px);
