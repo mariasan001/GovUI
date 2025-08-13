@@ -12,8 +12,7 @@ type Item = {
 export const ITEMS: Item[] = [
   { key: 'iconos',    slug: 'iconos',      title: 'Iconos',              variations: 1000,  keywords:['iconos'] },
   { key: 'colors',    slug: 'colores',     title: 'Colores',             variations: 0,  keywords:['paleta','tokens','theme'] },
-  { key: 'titles',    slug: 'titulos',     title: 'Títulos',             variations: 0,  keywords:['headings','h1','tipografia'] },
-  { key: 'texts',     slug: 'textos',      title: 'Textos',              variations: 0,  keywords:['parrafos','copias'] },
+  { key: 'tipografia',slug: 'tipografia',  title: 'tipografia',          variations: 0,  keywords:['headings','h1','tipografia'] },
   { key: 'cards',     slug: 'tarjetas',    title: 'Tarjetas',            variations: 0,  keywords:['card','panel','contenedor'] },
   { key: 'nav',       slug: 'navegacion',  title: 'Navegación',          variations: 0,  keywords:['navbar','menu','tabs'] },
   { key: 'footer',    slug: 'pie',         title: 'Pie de página',       variations: 0,  keywords:['footer'] },

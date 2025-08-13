@@ -2,6 +2,8 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { ITEMS } from "@/data/items";
 import IconosLoader from "./IconosLoader.client";
+import ColoresLoader from "./ColoresLoader.client";
+import TipografiaLoader from "./TipografiaLoader.client";
 
 type Props = { params: { slug: string } };
 
@@ -13,8 +15,9 @@ export default function Page({ params }: Props) {
   const item = ITEMS.find(i => i.slug === params.slug);
   if (!item) notFound();
 
-  if (params.slug === "iconos") return <IconosLoader />;
-
+  if (params.slug === "iconos")  return <IconosLoader />;
+  if (params.slug === "colores") return <ColoresLoader />;
+  if (params.slug === "tipografia") return <TipografiaLoader />;
   return (
     <main className="u-container u-stack" style={{ ["--stack-space" as any]: "16px" }}>
       <h1 className="gov-title">{item.title}</h1>

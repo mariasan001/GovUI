@@ -13,8 +13,33 @@ export default function IconCard({ entry, size, stroke, color }: Props) {
   const { name, label, Comp } = entry;
 
   const copy = async (text: string) => {
-    try { await navigator.clipboard.writeText(text); } catch {}
+    try {
+      // Camino ideal: Clipboard API en contexto seguro (https o localhost)
+      if (window.isSecureContext && navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+        return;
+      }
+    } catch {
+      // seguimos al fallback
+    }
+
+    // Fallback para http/IP o navegadores más quisquillosos (execCommand)
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy"); // deprecated, pero funciona como red de seguridad
+      document.body.removeChild(ta);
+    } catch {
+      // último recurso: prompt (al menos no falla silenciosamente)
+      window.prompt("Copia manualmente:", text);
+    }
   };
+
 
   const jsx = `<${name} size={${size}} strokeWidth={${stroke}} color="${color}" />`;
   const importLine = `import { ${name} } from 'lucide-react'`;
@@ -53,7 +78,6 @@ export default function IconCard({ entry, size, stroke, color }: Props) {
         >
           Copiar JSX
         </button>
-        
       </div>
     </div>
   );

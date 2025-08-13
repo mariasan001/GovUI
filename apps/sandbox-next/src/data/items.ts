@@ -8,7 +8,7 @@ export type Item = {
 
 export const ITEMS: Item[] = [
   { key: 'colors',    slug: 'colores',     title: 'Colores',             variations: 0 },
-  { key: 'titles',    slug: 'titulos',     title: 'Títulos',             variations: 0 },
+  { key: 'tipografia',    slug: 'tipografia',     title: 'tipografia',             variations: 0 },
   { key: 'texts',     slug: 'textos',      title: 'Textos',              variations: 0 },
   { key: 'cards',     slug: 'tarjetas',    title: 'Tarjetas',            variations: 3 },
   { key: 'nav',       slug: 'navegacion',  title: 'Navegación',          variations: 0 },
