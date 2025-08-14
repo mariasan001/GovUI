@@ -23,6 +23,9 @@ importers:
 
   apps/sandbox-next:
     dependencies:
+      '@govui/colors-catalog':
+        specifier: workspace:*
+        version: link:../../packages/colors-catalog
       '@govui/css-components':
         specifier: workspace:*
         version: link:../../packages/css-components
@@ -41,6 +44,9 @@ importers:
       '@govui/themes':
         specifier: workspace:*
         version: link:../../packages/themes
+      '@govui/typography-catalog':
+        specifier: workspace:*
+        version: link:../../packages/typography-catalog
       lucide-react:
         specifier: ^0.539.0
         version: 0.539.0(react@19.1.0)
@@ -85,6 +91,25 @@ importers:
         specifier: ^5
         version: 5.9.2
 
+  packages/colors-catalog:
+    dependencies:
+      lucide-react:
+        specifier: '>=0.300.0'
+        version: 0.539.0(react@19.1.0)
+      react:
+        specifier: '>=18'
+        version: 19.1.0
+      react-dom:
+        specifier: '>=18'
+        version: 19.1.0(react@19.1.0)
+    devDependencies:
+      tsup:
+        specifier: ^8.1.0
+        version: 8.5.0(postcss@8.4.31)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.5.4
+        version: 5.9.2
+
   packages/css-components: {}
 
   packages/css-core: {}
@@ -113,6 +138,25 @@ importers:
         version: 5.9.2
 
   packages/themes: {}
+
+  packages/typography-catalog:
+    dependencies:
+      lucide-react:
+        specifier: '>=0.300.0'
+        version: 0.539.0(react@19.1.0)
+      react:
+        specifier: '>=18'
+        version: 19.1.0
+      react-dom:
+        specifier: '>=18'
+        version: 19.1.0(react@19.1.0)
+    devDependencies:
+      tsup:
+        specifier: ^8.1.0
+        version: 8.5.0(postcss@8.4.31)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.5.4
+        version: 5.9.2
 
 packages:
 

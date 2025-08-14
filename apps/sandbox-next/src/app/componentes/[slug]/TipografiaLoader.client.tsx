@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 
 const TypographyShowcase = dynamic(
-  () => import("@features/typography").then(m => m.TypographyShowcase),
+  () => import("@govui/typography-catalog/next").then(m => m.TypographyShowcase),
   { ssr: false, loading: () => <div className="demo-card">Cargando tipografía…</div> }
 );
 

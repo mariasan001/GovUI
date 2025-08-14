@@ -1,3 +1,3 @@
-export { default as ColorsShowcase } from "./components/ColorsShowcase.client";
+// exporta solo lo “no cliente” (tokens, tipos, utils)
 export { COLORS } from "./constants/colors";
 export type { ColorKey } from "./constants/colors";

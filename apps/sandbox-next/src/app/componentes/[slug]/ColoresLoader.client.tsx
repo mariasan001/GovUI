@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 
 const ColorsShowcase = dynamic(
-  () => import("@features/colors").then(m => m.ColorsShowcase),
+  () => import("@govui/colors-catalog/next").then(m => m.ColorsShowcase),
   { ssr: false, loading: () => <div className="demo-card">Cargando colores…</div> }
 );
 
