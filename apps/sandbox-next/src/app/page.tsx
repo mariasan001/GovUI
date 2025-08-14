@@ -11,9 +11,9 @@ type Item = {
 
 export const ITEMS: Item[] = [
   { key: 'iconos',    slug: 'iconos',      title: 'Iconos',              variations: 1000,  keywords:['iconos'] },
-  { key: 'colors',    slug: 'colores',     title: 'Colores',             variations: 0,  keywords:['paleta','tokens','theme'] },
-  { key: 'tipografia',slug: 'tipografia',  title: 'tipografia',          variations: 0,  keywords:['headings','h1','tipografia'] },
-  { key: 'cards',     slug: 'tarjetas',    title: 'Tarjetas',            variations: 0,  keywords:['card','panel','contenedor'] },
+  { key: 'colors',    slug: 'colores',     title: 'Colores',             variations: 3,  keywords:['paleta','tokens','theme'] },
+  { key: 'tipografia',slug: 'tipografia',  title: 'tipografia',          variations: 7,  keywords:['headings','h1','tipografia'] },
+  { key: 'cards',     slug: 'tarjetas',    title: 'Tarjetas',            variations: 6,  keywords:['card','panel','contenedor'] },
   { key: 'nav',       slug: 'navegacion',  title: 'Navegación',          variations: 0,  keywords:['navbar','menu','tabs'] },
   { key: 'footer',    slug: 'pie',         title: 'Pie de página',       variations: 0,  keywords:['footer'] },
   { key: 'tabs',      slug: 'pestanas',    title: 'Pestañas',            variations: 0,  keywords:['tabs','segmentos'] },
@@ -109,3 +109,7 @@ export default function Page() {
     </main>
   );
 }
+/**
+ * terminamos con el comente card ahora iniciaremso con  el siguente componente
+ * que es 
+ */
