@@ -12,6 +12,7 @@ export const ITEMS: Item[] = [
   { key: 'texts',     slug: 'textos',      title: 'Textos',              variations: 0 },
   { key: 'cards',     slug: 'tarjetas',    title: 'Tarjetas',            variations: 3 },
   { key: 'nav',       slug: 'navegacion',  title: 'Navegación',          variations: 0 },
+  { key: 'inputs',    slug: 'inputs',      title: 'inputs',              variations: 0 },
   { key: 'footer',    slug: 'pie',         title: 'Pie de página',       variations: 0 },
   { key: 'tabs',      slug: 'pestanas',    title: 'Pestañas',            variations: 0 },
   { key: 'alerts',    slug: 'alertas',     title: 'Alertas',             variations: 4 },

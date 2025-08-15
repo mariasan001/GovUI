@@ -19,7 +19,7 @@
     "@govui/typography-catalog":"workspace:*",
     "@govui/cards-catalog": "workspace:*",
     "@govui/buttons-catalog": "workspace:^",
-
+    "@govui/inputs-catalog" :"workspace:",
     "@govui/themes": "workspace:*",
     "lucide-react": "^0.539.0",
     "next": "15.4.6",

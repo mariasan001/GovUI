@@ -16,6 +16,7 @@ export const ITEMS: Item[] = [
   { key: 'tipografia',slug: 'tipografia',  title: 'tipografia',          variations: 7,  keywords:['headings','h1','tipografia'] },
   { key: 'cards',     slug: 'tarjetas',    title: 'Tarjetas',            variations: 6,  keywords:['card','panel','contenedor'] },
   { key: 'nav',       slug: 'navegacion',  title: 'Navegación',          variations: 0,  keywords:['navbar','menu','tabs'] },
+  { key: 'inputs',    slug: 'inputs',      title: 'inputs',              variations: 0,  keywords:['inputs','campo','editable'] },
   { key: 'footer',    slug: 'pie',         title: 'Pie de página',       variations: 0,  keywords:['footer'] },
   { key: 'tabs',      slug: 'pestanas',    title: 'Pestañas',            variations: 0,  keywords:['tabs','segmentos'] },
   { key: 'alerts',    slug: 'alertas',     title: 'Alertas',             variations: 0,  keywords:['notificaciones','estado'] },
