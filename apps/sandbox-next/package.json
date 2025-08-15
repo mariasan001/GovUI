@@ -17,6 +17,7 @@
     "@govui/icons-catalog": "workspace:*",
     "@govui/colors-catalog": "workspace:*",
     "@govui/typography-catalog":"workspace:*",
+    "@govui/cards-catalog": "workspace:*",
 
     "@govui/themes": "workspace:*",
     "lucide-react": "^0.539.0",

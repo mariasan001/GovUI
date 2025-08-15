@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
                              "@govui/icons-catalog",
                              "@govui/colors-catalog",
                              "@govui/typography-catalog",
+                             "@govui/cards-catalog",
+                             
                      ]
 };
 

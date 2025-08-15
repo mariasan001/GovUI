@@ -1,0 +1,30 @@
+{
+  "name": "@govui/cards-catalog",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "files": ["dist"],
+  "sideEffects": ["./dist/styles.css", "**/*.css"],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".":      { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./next": { "types": "./dist/next.d.ts",  "import": "./dist/next.js"  },
+    "./styles.css": "./dist/styles.css"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "next": ">=13",
+    "lucide-react": ">=0.300.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "tsup": "^8.1.0"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/next.ts --dts --format esm --sourcemap --treeshake --clean && cp -f src/styles.css dist/styles.css || true",
+    "dev": "tsup src/index.ts src/next.ts --dts --format esm --sourcemap --treeshake --watch --clean",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

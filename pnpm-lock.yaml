@@ -23,6 +23,9 @@ importers:
 
   apps/sandbox-next:
     dependencies:
+      '@govui/cards-catalog':
+        specifier: workspace:*
+        version: link:../../packages/cards-catalog
       '@govui/colors-catalog':
         specifier: workspace:*
         version: link:../../packages/colors-catalog
@@ -89,6 +92,28 @@ importers:
         version: 13.0.2(postcss@8.4.31)
       typescript:
         specifier: ^5
+        version: 5.9.2
+
+  packages/cards-catalog:
+    dependencies:
+      lucide-react:
+        specifier: '>=0.300.0'
+        version: 0.539.0(react@19.1.0)
+      next:
+        specifier: '>=13'
+        version: 15.4.6(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react:
+        specifier: '>=18'
+        version: 19.1.0
+      react-dom:
+        specifier: '>=18'
+        version: 19.1.0(react@19.1.0)
+    devDependencies:
+      tsup:
+        specifier: ^8.1.0
+        version: 8.5.0(postcss@8.4.31)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.5.4
         version: 5.9.2
 
   packages/colors-catalog:

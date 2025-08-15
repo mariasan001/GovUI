@@ -27,10 +27,11 @@
       "@hooks/*": ["./src/hooks/*"],
       "@lib/*": ["./src/lib/*"],
       "@types/*": ["./src/types/*"],
+      "@govui/cards-catalog": ["../../packages/cards-catalog/src/index.ts"],
+      "@govui/cards-catalog/*": ["../../packages/cards-catalog/src/*"]
       
     },
 
-    "plugins": [{ "name": "next" }]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]

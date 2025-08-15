@@ -1,5 +1,7 @@
-// variants/index.ts
 import type { Variant } from "./types";
+export type { Variant } from "./types";
+export { GROUPS } from "./types";
+
 import { messageVariant } from "./message";
 import { inboxWelcomeVariant } from "./WelcomeMessageCard";
 import { articleFeatureVariant } from "./ArticleFeatureCard";
@@ -13,10 +15,18 @@ export const VARIANTS: Variant[] = [
   articleFeatureVariant,
   articleCompactVariant,
   webinarVariant,
-  appInfoVariant,
+  appInfoVariant
 ];
 
-// (opcional) acceso directo por id
-export const VARIANTS_BY_ID: Record<string, Variant> = Object.fromEntries(
-  VARIANTS.map((v) => [v.id, v] as const)
-);
+export const VARIANTS_BY_ID = Object.fromEntries(
+  VARIANTS.map(v => [v.id, v] as const)
+) as Record<(typeof VARIANTS)[number]["id"], Variant>;
+
+export {
+  messageVariant,
+  inboxWelcomeVariant,
+  articleFeatureVariant,
+  articleCompactVariant,
+  webinarVariant,
+  appInfoVariant
+};

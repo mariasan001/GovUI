@@ -109,7 +109,3 @@ export default function Page() {
     </main>
   );
 }
-/**
- * terminamos con el comente card ahora iniciaremso con  el siguente componente
- * que es 
- */
