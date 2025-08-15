@@ -9,6 +9,7 @@ type Item = {
   keywords?: string[];
 };
 
+
 export const ITEMS: Item[] = [
   { key: 'iconos',    slug: 'iconos',      title: 'Iconos',              variations: 1000,  keywords:['iconos'] },
   { key: 'colors',    slug: 'colores',     title: 'Colores',             variations: 3,  keywords:['paleta','tokens','theme'] },
@@ -18,7 +19,7 @@ export const ITEMS: Item[] = [
   { key: 'footer',    slug: 'pie',         title: 'Pie de página',       variations: 0,  keywords:['footer'] },
   { key: 'tabs',      slug: 'pestanas',    title: 'Pestañas',            variations: 0,  keywords:['tabs','segmentos'] },
   { key: 'alerts',    slug: 'alertas',     title: 'Alertas',             variations: 0,  keywords:['notificaciones','estado'] },
-  { key: 'buttons',   slug: 'botones',     title: 'Botones',             variations: 0,  keywords:['cta','acciones'] },
+  { key: 'buttons',   slug: 'botones',     title: 'Botones',             variations: 8,  keywords:['cta','acciones'] },
   { key: 'layout',    slug: 'layout',      title: 'Layout',              variations: 0,  keywords:['grid','stack','container'] },
   { key: 'forms',     slug: 'formularios', title: 'Formularios',         variations: 0,  keywords:['inputs','select','checkbox'] },
   { key: 'search',    slug: 'buscador',    title: 'Buscador',            variations: 0,  keywords:['search','filtros'] },

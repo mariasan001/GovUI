@@ -1,3 +1,15 @@
+/* === Brand & Theme switches === */
+:root {
+  /* valores por defecto (fallback, otra marca) */
+  --color-primary-500:#7b1e3d;
+  --color-primary-600:#671a34;
+  --color-neutral-0:#ffffff;
+  --color-neutral-900:#1a1a1a;
+  --color-accent-500:#b48954;
+  --color-accent-300:#d3bf9d;
+}
+
+/* Marca: EDOMEX (claro) */
 :root[data-brand="edomex"]{
   --color-primary-500:#871F34;
   --color-primary-600:#74182B;
@@ -6,7 +18,20 @@
   --color-accent-500:#B48954;
   --color-accent-300:#D3BF9D;
 }
+
+/* Marca: EDOMEX (oscuro) */
 :root[data-brand="edomex"][data-theme="dark"]{
   --color-neutral-0:#0A0A0A;
   --color-neutral-900:#F5F5F5;
+}
+
+/* Mapea a tokens del botón (reutilizados por clases) */
+:root {
+  --primary-9: var(--color-primary-500);
+  --primary-10: var(--color-primary-600);
+  --accent-5: var(--color-accent-500);
+  --accent-3: var(--color-accent-300);
+  --surface: var(--color-neutral-0);
+  --surface-2: color-mix(in srgb, var(--color-neutral-900) 6%, var(--color-neutral-0));
+  --ink: var(--color-neutral-900);
 }

@@ -23,6 +23,9 @@ importers:
 
   apps/sandbox-next:
     dependencies:
+      '@govui/buttons-catalog':
+        specifier: workspace:^
+        version: link:../../packages/buttons-catalog
       '@govui/cards-catalog':
         specifier: workspace:*
         version: link:../../packages/cards-catalog
@@ -92,6 +95,28 @@ importers:
         version: 13.0.2(postcss@8.4.31)
       typescript:
         specifier: ^5
+        version: 5.9.2
+
+  packages/buttons-catalog:
+    dependencies:
+      next:
+        specifier: '>=13'
+        version: 15.4.6(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react:
+        specifier: '>=18'
+        version: 19.1.0
+      react-dom:
+        specifier: '>=18'
+        version: 19.1.0(react@19.1.0)
+    devDependencies:
+      lucide-react:
+        specifier: ^0.446.0
+        version: 0.446.0(react@19.1.0)
+      tsup:
+        specifier: ^8.1.0
+        version: 8.5.0(postcss@8.4.31)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.6.0
         version: 5.9.2
 
   packages/cards-catalog:
@@ -1717,6 +1742,11 @@ packages:
 
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
+
+  lucide-react@0.446.0:
+    resolution: {integrity: sha512-BU7gy8MfBMqvEdDPH79VhOXSEgyG8TSPOKWaExWGCQVqnGH7wGgDngPbofu+KdtVjPQBWbEmnfMTq90CTiiDRg==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
 
   lucide-react@0.539.0:
     resolution: {integrity: sha512-VVISr+VF2krO91FeuCrm1rSOLACQUYVy7NQkzrOty52Y8TlTPcXcMdQFj9bYzBgXbWCiywlwSZ3Z8u6a+6bMlg==}
@@ -3873,6 +3903,10 @@ snapshots:
       js-tokens: 4.0.0
 
   lru-cache@10.4.3: {}
+
+  lucide-react@0.446.0(react@19.1.0):
+    dependencies:
+      react: 19.1.0
 
   lucide-react@0.539.0(react@19.1.0):
     dependencies:

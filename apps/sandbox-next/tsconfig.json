@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -13,26 +17,51 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-
     /* mejoras */
     "baseUrl": ".",
     "forceConsistentCasingInFileNames": true,
     "verbatimModuleSyntax": true,
-
     /* alias */
     "paths": {
-      "@/*": ["./src/*"],
-      "@features/*": ["./src/features/*"],
-      "@components/*": ["./src/components/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@lib/*": ["./src/lib/*"],
-      "@types/*": ["./src/types/*"],
-      "@govui/cards-catalog": ["../../packages/cards-catalog/src/index.ts"],
-      "@govui/cards-catalog/*": ["../../packages/cards-catalog/src/*"]
-      
+      "@/*": [
+        "./src/*"
+      ],
+      "@features/*": [
+        "./src/features/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@lib/*": [
+        "./src/lib/*"
+      ],
+      "@types/*": [
+        "./src/types/*"
+      ],
+      "@govui/cards-catalog": [
+        "../../packages/cards-catalog/src/index.ts"
+        
+      ],
+      "@govui/cards-catalog/*": [
+        "../../packages/cards-catalog/src/*"
+      ]
     },
-
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

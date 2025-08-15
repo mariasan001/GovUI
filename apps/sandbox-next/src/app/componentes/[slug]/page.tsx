@@ -5,6 +5,8 @@ import IconosLoader from "./IconosLoader.client";
 import ColoresLoader from "./ColoresLoader.client";
 import TipografiaLoader from "./TipografiaLoader.client";
 import TarjetasLoader from "./TarjetasLoader.client";
+import ButtonsShowcase from "./bottonLoader.client";
+
 
 type Props = { params: { slug: string } };
 
@@ -20,6 +22,7 @@ export default function Page({ params }: Props) {
   if (params.slug === "colores") return <ColoresLoader />;
   if (params.slug === "tipografia") return <TipografiaLoader />;
   if (params.slug === "tarjetas") return <TarjetasLoader />;
+  if (params.slug === "botones") return <ButtonsShowcase />;
   return (
     <main className="u-container u-stack" style={{ ["--stack-space" as any]: "16px" }}>
       <h1 className="gov-title">{item.title}</h1>
