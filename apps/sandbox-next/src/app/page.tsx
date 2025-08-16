@@ -12,26 +12,26 @@ type Item = {
 
 export const ITEMS: Item[] = [
   { key: 'iconos',    slug: 'iconos',      title: 'Iconos',              variations: 1000,  keywords:['iconos'] },
-  { key: 'colors',    slug: 'colores',     title: 'Colores',             variations: 3,  keywords:['paleta','tokens','theme'] },
-  { key: 'tipografia',slug: 'tipografia',  title: 'tipografia',          variations: 7,  keywords:['headings','h1','tipografia'] },
-  { key: 'cards',     slug: 'tarjetas',    title: 'Tarjetas',            variations: 6,  keywords:['card','panel','contenedor'] },
-  { key: 'nav',       slug: 'navegacion',  title: 'Navegación',          variations: 0,  keywords:['navbar','menu','tabs'] },
-  { key: 'inputs',    slug: 'inputs',      title: 'inputs',              variations: 0,  keywords:['inputs','campo','editable'] },
-  { key: 'footer',    slug: 'pie',         title: 'Pie de página',       variations: 0,  keywords:['footer'] },
-  { key: 'tabs',      slug: 'pestanas',    title: 'Pestañas',            variations: 0,  keywords:['tabs','segmentos'] },
-  { key: 'alerts',    slug: 'alertas',     title: 'Alertas',             variations: 0,  keywords:['notificaciones','estado'] },
-  { key: 'buttons',   slug: 'botones',     title: 'Botones',             variations: 8,  keywords:['cta','acciones'] },
-  { key: 'layout',    slug: 'layout',      title: 'Layout',              variations: 0,  keywords:['grid','stack','container'] },
-  { key: 'forms',     slug: 'formularios', title: 'Formularios',         variations: 0,  keywords:['inputs','select','checkbox'] },
-  { key: 'search',    slug: 'buscador',    title: 'Buscador',            variations: 0,  keywords:['search','filtros'] },
-  { key: 'charts',    slug: 'graficas',    title: 'Gráficas',            variations: 0,  keywords:['charts','sparkline'] },
-  { key: 'calendars', slug: 'calendarios', title: 'Calendarios',         variations: 0,  keywords:['date','calendar'] },
-  { key: 'tooltips',  slug: 'tooltips',    title: 'Tooltips',            variations: 0,  keywords:['ayuda','hint'] },
-  { key: 'loader',    slug: 'cargador',    title: 'Cargador de página',  variations: 0,  keywords:['spinner','loading'] },
-  { key: 'modals',    slug: 'modales',     title: 'Modales',             variations: 0,  keywords:['dialog','overlay'] },
-  { key: 'lists',     slug: 'listas',      title: 'Listas',              variations: 0,  keywords:['items','ul','ol'] },
-  { key: 'carousels', slug: 'carruseles',  title: 'Carruseles',          variations: 0,  keywords:['carousel','slider'] },
-  { key: 'counters',  slug: 'contadores',  title: 'Contadores',          variations: 0,  keywords:['badge','kpi','metricas'] },
+  { key: 'colors',    slug: 'colores',     title: 'Colores',             variations: 3,     keywords:['paleta','tokens','theme'] },
+  { key: 'tipografia',slug: 'tipografia',  title: 'tipografia',          variations: 7,     keywords:['headings','h1','tipografia'] },
+  { key: 'cards',     slug: 'tarjetas',    title: 'Tarjetas',            variations: 6,     keywords:['card','panel','contenedor'] },
+  { key: 'nav',       slug: 'navegacion',  title: 'Navegación',          variations: 4,     keywords:['navbar','menu','tabs'] },
+  { key: 'inputs',    slug: 'inputs',      title: 'inputs',              variations: 6,     keywords:['inputs','campo','editable'] },
+  { key: 'footer',    slug: 'pie',         title: 'Pie de página',       variations: 0,     keywords:['footer'] },
+  { key: 'tabs',      slug: 'pestanas',    title: 'Pestañas',            variations: 0,     keywords:['tabs','segmentos'] },
+  { key: 'alerts',    slug: 'alertas',     title: 'Alertas',             variations: 0,     keywords:['notificaciones','estado'] },
+  { key: 'buttons',   slug: 'botones',     title: 'Botones',             variations: 8,     keywords:['cta','acciones'] },
+  { key: 'layout',    slug: 'layout',      title: 'Layout',              variations: 0,     keywords:['grid','stack','container'] },
+  { key: 'forms',     slug: 'formularios', title: 'Formularios',         variations: 0,     keywords:['inputs','select','checkbox'] },
+  { key: 'search',    slug: 'buscador',    title: 'Buscador',            variations: 0,     keywords:['search','filtros'] },
+  { key: 'charts',    slug: 'graficas',    title: 'Gráficas',            variations: 0,     keywords:['charts','sparkline'] },
+  { key: 'calendars', slug: 'calendarios', title: 'Calendarios',         variations: 0,     keywords:['date','calendar'] },
+  { key: 'tooltips',  slug: 'tooltips',    title: 'Tooltips',            variations: 0,     keywords:['ayuda','hint'] },
+  { key: 'loader',    slug: 'cargador',    title: 'Cargador de página',  variations: 0,     keywords:['spinner','loading'] },
+  { key: 'modals',    slug: 'modales',     title: 'Modales',             variations: 0,     keywords:['dialog','overlay'] },
+  { key: 'lists',     slug: 'listas',      title: 'Listas',              variations: 0,     keywords:['items','ul','ol'] },
+  { key: 'carousels', slug: 'carruseles',  title: 'Carruseles',          variations: 0,     keywords:['carousel','slider'] },
+  { key: 'counters',  slug: 'contadores',  title: 'Contadores',          variations: 0,     keywords:['badge','kpi','metricas'] },
 ];
 
 // Quita diacríticos y baja a minúsculas
@@ -56,6 +56,7 @@ export default function Page() {
 
   return (
     <main className="u-container u-stack" style={{ '--stack-space': '20px' } as React.CSSProperties}>
+
       {/* Título + texto */}
       <header className="u-stack u-center">
         <h1 className="display-hero">Componentes de GovUI</h1>
@@ -79,7 +80,6 @@ export default function Page() {
           aria-label="Buscar componentes"
         />
       </div>
-
 
       {/* Grid de tiles */}
       <section

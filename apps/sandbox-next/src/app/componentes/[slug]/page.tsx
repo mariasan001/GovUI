@@ -7,6 +7,7 @@ import TipografiaLoader from "./TipografiaLoader.client";
 import TarjetasLoader from "./TarjetasLoader.client";
 import ButtonsShowcase from "./bottonLoader.client";
 import InputsLoader from "./InputsLoader.client";
+import NavLoader from "./NavLoader.client";
 
 
 type Props = { params: { slug: string } };
@@ -25,6 +26,7 @@ export default function Page({ params }: Props) {
   if (params.slug === "tarjetas") return <TarjetasLoader />;
   if (params.slug === "botones") return <ButtonsShowcase />;
   if (params.slug === "inputs") return <InputsLoader />;
+  if (params.slug === "navegacion") return <NavLoader />;
 
   return (
     <main className="u-container u-stack" style={{ ["--stack-space" as any]: "16px" }}>

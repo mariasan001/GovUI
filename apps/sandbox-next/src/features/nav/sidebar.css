@@ -1,0 +1,50 @@
+/* ======== DEMO SIN JS (checkbox hack) ======== */
+
+/* Cuando el toggle global está CHECKED → lado colapsado */
+.sb-demo__toggle:checked + .sb {
+  width: var(--w-c);
+}
+.sb-demo__toggle:checked + .sb .sb__brand {
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+}
+.sb-demo__toggle:checked + .sb .sb__search input {
+  display: none;
+}
+
+/* Items en colapsado: sólo íconos */
+.sb-demo__toggle:checked + .sb .sb__item {
+  grid-template-columns: 24px;
+  justify-items: center;
+}
+.sb-demo__toggle:checked + .sb .sb__txt,
+.sb-demo__toggle:checked + .sb .sb__badge,
+.sb-demo__toggle:checked + .sb .sb__chev,
+.sb-demo__toggle:checked + .sb .sb__user-meta {
+  display: none;
+}
+
+/* Submenú inline (expandido): depende del checkbox local */
+.sb-demo__sub:not(:checked) + .sb__item + .sb__sub {
+  max-height: 0;
+  opacity: 0;
+}
+.sb-demo__sub:checked + .sb__item + .sb__sub {
+  max-height: 300px;
+  opacity: 1;
+}
+
+/* Flyout solo cuando está colapsado + hover en el item con submenú */
+.sb .sb__flyout {
+  display: none;
+} /* oculto por defecto */
+.sb-demo__toggle:checked + .sb .sb__li.has-sub:hover .sb__flyout {
+  display: block;
+}
+
+/* “rotar” chevron cuando submenú está abierto (solo expandido) */
+.sb-demo__sub:not(:checked) + .sb__item .sb__chev {
+  transform: rotate(-90deg);
+  opacity: 0.7;
+}
