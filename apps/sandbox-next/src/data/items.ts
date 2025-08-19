@@ -29,4 +29,5 @@ export const ITEMS: Item[] = [
   { key: 'lists',     slug: 'listas',      title: 'Listas',              variations: 0 },
   { key: 'carousels', slug: 'carruseles',  title: 'Carruseles',          variations: 0 },
   { key: 'counters',  slug: 'contadores',  title: 'Contadores',          variations: 0 },
-];
+  { key: 'login',     slug: 'login',       title: 'login',               variations: 0 },
+]; 

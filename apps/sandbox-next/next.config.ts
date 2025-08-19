@@ -10,7 +10,8 @@ const nextConfig: NextConfig = {
     "@govui/cards-catalog",
     "@govui/buttons-catalog", 
     "@govui/inputs-catalog",
-    "@govui/nav-catalog"
+    "@govui/nav-catalog",
+     "@govui/loaders-catalog",
   ],
   experimental: {
     // Reduce el peso de iconos (tree-shake mejor los imports)
