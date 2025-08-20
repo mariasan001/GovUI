@@ -1,0 +1,424 @@
+:root {
+  --mx-red: #9f2141;
+  --mx-red-700: #7f1b35;
+  --mx-gold: #bc945a;
+  --surface: #ffffff;
+  --ink: #0a0a0a;
+  --ink-3: #6b7280;
+
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+
+  --input-bg: #eef3ff; /* azul muy claro como tu mock */
+  --input-border: #dae4ff;
+  --input-ring: rgba(159, 33, 65, 0.18); /* ring brand */
+}
+
+/* --- SHELL: que llene el espacio --- */
+.login-shell {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.2fr) minmax(420px, 1fr);
+  gap: 48px;
+  inline-size: 100%;
+  min-block-size: clamp(560px, 68vh, 780px); /* llena vertical sin romper */
+  padding: 50px;
+  background: var(--surface);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow);
+  height: 850px;
+  align-items: stretch; /* <- estira ambas columnas */
+}
+
+/* --- IZQUIERDA --- */
+.login-left {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  block-size: 100%;
+  width: 750px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+    url("/img/fondo_login.png") center/cover no-repeat;
+  background-color: var(--mx-red);
+}
+
+/* acento diagonal oscuro */
+
+.login-left__content {
+  position: relative;
+  color: #fff;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  block-size: 100%;
+}
+.login-left__title {
+  font-size: clamp(24px, 2.2vw, 36px);
+  line-height: 1.1;
+  margin: 0 0 12px 0;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+.login-left__subtitle {
+  max-inline-size: 52ch;
+  opacity: 0.95;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* --- DERECHA --- */
+.login-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-block: 28px;
+}
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  margin-bottom: 102px;
+}
+.login-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111;
+  margin: 8px 0 6px;
+}
+.login-desc {
+  color: var(--ink-3);
+  font-size: 14px;
+  margin: 0 0 22px;
+  max-inline-size: 60ch;
+}
+
+/* --- FORM --- */
+.login-form {
+  display: grid;
+  gap: 12px;
+  grid-auto-rows: min-content;
+}
+.login-label {
+  font-size: 14px;
+  color: #444;
+  font-weight: 700;
+}
+
+.login-input {
+  inline-size: 100%;
+  block-size: 46px;
+  padding-inline: 12px;
+  border-radius: 12px;
+  border: 2px solid var(--input-border);
+  background: var(--input-bg);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+.login-input::placeholder {
+  color: #9aa8c7;
+}
+.login-input:focus {
+  background: #fff;
+  border-color: #c9d7ff;
+  box-shadow: 0 0 0 3px var(--input-ring);
+}
+
+/* input con botón (mostrar/ocultar) */
+.input-group {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+.input-group__field {
+  grid-column: 1 / 2;
+}
+.input-group__btn {
+  grid-column: 2 / 3;
+  height: 38px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  font-size: 12px;
+  color: #475569;
+  cursor: pointer;
+}
+.input-group__btn:hover {
+  background: #fff;
+}
+
+/* Cinta decorativa */
+.decor-cinta {
+  height: 16px;
+  margin: 16px 0 10px;
+  background: url("/img/cinta.png") repeat-x center;
+  background-size: auto 16px;
+  opacity: 0.92;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+/* Botón principal */
+.btn-primary {
+  block-size: 48px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: var(--mx-red);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  transition: transform 0.05s ease, background 0.2s ease, opacity 0.2s ease;
+}
+.btn-primary:hover {
+  background: var(--mx-red-700);
+}
+.btn-primary:active {
+  transform: translateY(1px);
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Link secundario */
+.link-muted {
+  justify-self: center;
+  margin-top: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 1080px) {
+  .login-shell {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 24px;
+  }
+  .login-left {
+    min-block-size: 360px;
+  }
+  .login-brand {
+    margin-left: 0;
+  }
+}
+/* Accesibilidad para textos sólo-visuales */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Grupo con iconos */
+.input-group {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9aa8c7;
+  display: inline-flex;
+  pointer-events: none;
+}
+
+/* El input ya tiene 46px de alto; sólo añadimos padding para el icono */
+.input-with-icon {
+  padding-left: 40px; /* deja espacio al candado */
+}
+
+/* Botón ojo (toggle) */
+.icon-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 34px;
+  width: 38px;
+  margin-right: 5px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  color: #475569;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+.icon-btn:hover {
+  background: #fff;
+}
+.icon-btn:focus-visible {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 3px var(--input-ring);
+}
+/* Contenedor posicionado para la toolbar */
+.login-shell {
+  position: relative;
+}
+
+/* Toolbar flotante */
+.login-toolbar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+}
+
+.copy-btn {
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  font-size: 12px;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+.copy-btn:hover {
+  background: #fff;
+}
+.copy-btn:focus-visible {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 3px var(--input-ring);
+}
+
+/* (ya tienes) accesibilidad del texto oculto */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+/* ======= Mobile polish ======= */
+
+/* ≤ 1080px: ya apilamos, ajusta paddings y gaps */
+@media (max-width: 1080px){
+  .login-shell{
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: clamp(18px, 3.6vw, 24px);
+    min-block-size: initial;            /* no fuerces altura en mobile */
+    border-radius: 24px;
+  }
+  .login-left{ min-block-size: 360px; }
+}
+
+/* ≤ 720px: compacta más, redondeos suaves y tipografía fluida */
+@media (max-width: 720px){
+  .login-shell{
+    gap: 20px;
+    padding: clamp(14px, 4vw, 20px);
+    border-radius: 20px;
+  }
+
+  .login-left{
+    min-block-size: 300px;
+    border-radius: 20px;
+  }
+  .login-left__content{ padding: 22px; }
+  .login-left__title{ font-size: clamp(20px, 6vw, 28px); }
+  .login-left__subtitle{ font-size: 13px; }
+
+  .login-right{ padding-block: 0; }
+  .login-title{ font-size: clamp(22px, 6vw, 28px); margin-top: 0; }
+  .login-desc{ font-size: 13px; margin-bottom: 16px; }
+
+  .login-form{ gap: 10px; }
+  .login-label{ font-size: 12px; }
+  .login-input{
+    block-size: 46px;
+    font-size: 16px; /* evita zoom de iOS */
+  }
+  .input-with-icon{ padding-left: 40px; }
+
+  .icon-btn{
+    right: 6px;
+    width: 40px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .decor-cinta{
+    height: 12px;
+    margin: 12px 0 8px;
+    background-size: auto 12px;
+  }
+
+  .btn-primary{
+    block-size: 48px;
+    width: 100%;       /* botón ancho completo */
+    font-size: 15px;
+    border-radius: 12px;
+  }
+
+  /* Toolbar (Copiar .tsx) no tape el contenido */
+  .login-toolbar{
+    top: auto;
+    right: 12px;
+    bottom: 12px;
+  }
+}
+
+/* ≤ 480px: ultra compacto, evita desbordes */
+@media (max-width: 480px){
+  .login-shell{
+    padding: max(12px, env(safe-area-inset-left));
+    border-radius: 16px;
+  }
+  .login-left{
+    min-block-size: 240px;
+    border-radius: 16px;
+  }
+  .login-left__curve{
+    /* reduce la curva para que no empuje el layout */
+    inset: auto -18% -10px auto;
+    inline-size: 78%;
+    block-size: 58%;
+    border-bottom-left-radius: 40px;
+  }
+  .login-left__content{ padding: 18px; }
+  .login-left__subtitle{ max-inline-size: 46ch; }
+
+  .login-brand{ margin: 4px 0 8px auto; }
+  .login-title{ margin: 4px 0 6px; }
+  .login-form{ gap: 8px; }
+
+  .copy-btn{ padding: 0 10px; height: 32px; font-size: 12px; }
+}
+
+/* Evita que las imágenes de marca rompan layout */
+.login-brand :where(img, svg){
+  max-height: 40px;
+  width: auto;
+}

@@ -9,6 +9,7 @@ import ButtonsShowcase from "./bottonLoader.client";
 import InputsLoader from "./InputsLoader.client";
 import NavLoader from "./NavLoader.client";
 import LoadersLoader from "./LoadersLoader.client";
+import LoginLoader from "./LoginLoader.client";
 
 
 type Props = { params: { slug: string } };
@@ -29,6 +30,7 @@ export default function Page({ params }: Props) {
   if (params.slug === "inputs") return <InputsLoader />;
   if (params.slug === "navegacion") return <NavLoader />;
   if (params.slug === "cargador") return <LoadersLoader />;
+  if (params.slug === "login") return <LoginLoader />;
 
   return (
     <main className="u-container u-stack" style={{ ["--stack-space" as any]: "16px" }}>

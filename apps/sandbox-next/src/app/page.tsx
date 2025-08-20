@@ -32,7 +32,7 @@ export const ITEMS: Item[] = [
   { key: 'lists',     slug: 'listas',      title: 'Listas',              variations: 0,     keywords:['items','ul','ol'] },
   { key: 'carousels', slug: 'carruseles',  title: 'Carruseles',          variations: 0,     keywords:['carousel','slider'] },
   { key: 'counters',  slug: 'contadores',  title: 'Contadores',          variations: 0,     keywords:['badge','kpi','metricas'] },
-  { key: 'login',     slug: 'login',       title: 'login',               variations: 0,     keywords:['login', 'iniciar'] },
+  { key: 'login',     slug: 'login',       title: 'login',               variations: 1,     keywords:['login', 'iniciar'] },
 ];
 
 // Quita diacríticos y baja a minúsculas
