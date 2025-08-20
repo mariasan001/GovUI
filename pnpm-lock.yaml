@@ -65,6 +65,9 @@ importers:
       '@govui/themes':
         specifier: workspace:*
         version: link:../../packages/themes
+      '@govui/tooltips-catalog':
+        specifier: workspace:*
+        version: link:../../packages/tooltips-catalog
       '@govui/typography-catalog':
         specifier: workspace:*
         version: link:../../packages/typography-catalog
@@ -291,6 +294,28 @@ importers:
         version: 5.9.2
 
   packages/themes: {}
+
+  packages/tooltips-catalog:
+    dependencies:
+      next:
+        specifier: '>=13'
+        version: 15.4.6(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react:
+        specifier: '>=18'
+        version: 19.1.0
+      react-dom:
+        specifier: '>=18'
+        version: 19.1.0(react@19.1.0)
+    devDependencies:
+      lucide-react:
+        specifier: ^0.446.0
+        version: 0.446.0(react@19.1.0)
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.0(postcss@8.4.31)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.2
 
   packages/typography-catalog:
     dependencies:

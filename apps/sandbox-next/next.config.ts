@@ -11,7 +11,8 @@ const nextConfig: NextConfig = {
     "@govui/inputs-catalog",
     "@govui/nav-catalog",
     "@govui/loaders-catalog",
-    "@govui/login-catalog", // <- solo si YA lo consumes como paquete
+    "@govui/login-catalog",
+    "@govui/tooltips-catalog/next",
   ],
   experimental: {
     // Tree-shake más fino para lucide
