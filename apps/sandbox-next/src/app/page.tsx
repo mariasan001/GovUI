@@ -9,7 +9,6 @@ type Item = {
   keywords?: string[];
 };
 
-
 export const ITEMS: Item[] = [
   { key: 'iconos',    slug: 'iconos',      title: 'Iconos',              variations: 1000,  keywords:['iconos'] },
   { key: 'colors',    slug: 'colores',     title: 'Colores',             variations: 3,     keywords:['paleta','tokens','theme'] },
@@ -22,11 +21,11 @@ export const ITEMS: Item[] = [
   { key: 'alerts',    slug: 'alertas',     title: 'Alertas',             variations: 0,     keywords:['notificaciones','estado'] },
   { key: 'buttons',   slug: 'botones',     title: 'Botones',             variations: 8,     keywords:['cta','acciones'] },
   { key: 'layout',    slug: 'layout',      title: 'Layout',              variations: 0,     keywords:['grid','stack','container'] },
-  { key: 'forms',     slug: 'formularios', title: 'Formularios',         variations: 0,     keywords:['inputs','select','checkbox'] },
+  { key: 'forms',     slug: 'formularios', title: 'Formularios',         variations: 11,     keywords:['inputs','select','checkbox'] },
   { key: 'search',    slug: 'buscador',    title: 'Buscador',            variations: 0,     keywords:['search','filtros'] },
-  { key: 'charts',    slug: 'graficas',    title: 'Gráficas',            variations: 0,     keywords:['charts','sparkline'] },
+  { key: 'charts',    slug: 'graficas',    title: 'Gráficas',            variations: 24,     keywords:['charts','sparkline'] },
   { key: 'calendars', slug: 'calendarios', title: 'Calendarios',         variations: 0,     keywords:['date','calendar'] },
-  { key: 'tooltips',  slug: 'tooltips',    title: 'Tooltips',            variations: 0,     keywords:['ayuda','hint'] },
+  { key: 'tooltips',  slug: 'tooltips',    title: 'Tooltips',            variations: 14,     keywords:['ayuda','hint'] },
   { key: 'loader',    slug: 'cargador',    title: 'Cargador de página',  variations: 8,     keywords:['spinner','loading'] },
   { key: 'modals',    slug: 'modales',     title: 'Modales',             variations: 0,     keywords:['dialog','overlay'] },
   { key: 'lists',     slug: 'listas',      title: 'Listas',              variations: 0,     keywords:['items','ul','ol'] },
@@ -44,7 +43,6 @@ const fold = (s: string) =>
 
 export default function Page() {
   const [q, setQ] = React.useState('');
-
   const filtered = React.useMemo(() => {
     const s = fold(q.trim());
     if (!s) return ITEMS;
@@ -112,4 +110,3 @@ export default function Page() {
     </main>
   );
 }
-
