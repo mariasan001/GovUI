@@ -1,5 +1,4 @@
 "use client";
-
 import "./forms.css";
 import { VARIANTS } from "../variants";
 import { GROUPS } from "../variants/types";
@@ -18,7 +17,7 @@ function CopyBtn({ code }: { code: string }) {
         setOk(true); setTimeout(() => setOk(false), 1000);
     }
     return <button className="f-copy" onClick={copy}>{ok ? "¡Copiado ✓!" : "Copiar .tsx"}</button>;
-}
+} 
 
 export function FormsShowcase() {
     return (

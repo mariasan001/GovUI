@@ -14,6 +14,8 @@ const nextConfig: NextConfig = {
     "@govui/login-catalog",
     "@govui/tooltips-catalog",
     "@govui/forms-catalog",
+    "@govui/counters-catalog",
+     "@govui/modals-catalog",
   ],
   experimental: {
     // Tree-shake más fino para lucide

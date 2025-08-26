@@ -13,6 +13,8 @@ import LoginLoader from "./LoginLoader.client";
 import TooltipsLoader from "./TooltipsLoader.client";
 import FormsLoader from "./FormsLoader.client";
 import ChartsLoader from "./ChartsLoader.client";
+import CountersLoader from "./CountersLoader.client";
+import ModalsLoader from "./ModalsLoader.client";
 
 type Props = { params: { slug: string } };
 export function generateStaticParams() {
@@ -34,18 +36,18 @@ export default function Page({ params }: Props) {
       if (params.slug === "tooltips") return <TooltipsLoader />;
       if (params.slug === "formularios") return <FormsLoader />;
       if (params.slug === "graficas") return <ChartsLoader />; 
+      if (params.slug === "contadores") return <CountersLoader />;
+      if (params.slug === "modales") return <ModalsLoader />;
+
   return (
     <main
       className="u-container u-stack"
       style={{ ["--stack-space" as any]: "16px" }}>
-
       <h1 className="gov-title">{item.title}</h1>
       <p className="u-text-muted">{item.variations} variaciones</p>
-
       <div className="demo-card">
         Aún no hay variaciones para este componente.
       </div>
-
     </main>
   );
 }

@@ -39,6 +39,9 @@ importers:
       '@govui/colors-catalog':
         specifier: workspace:*
         version: link:../../packages/colors-catalog
+      '@govui/counters-catalog':
+        specifier: 'workspace:'
+        version: link:../../packages/counters-catalog
       '@govui/css-components':
         specifier: workspace:*
         version: link:../../packages/css-components
@@ -66,6 +69,9 @@ importers:
       '@govui/login-catalog':
         specifier: 'workspace:'
         version: link:../../packages/login-catalog
+      '@govui/modals-catalog':
+        specifier: 'workspace:'
+        version: link:../../packages/modals-catalog
       '@govui/nav-catalog':
         specifier: 'workspace:'
         version: link:../../packages/nav-catalog
@@ -185,6 +191,28 @@ importers:
         specifier: ^5.5.4
         version: 5.9.2
 
+  packages/counters-catalog:
+    dependencies:
+      next:
+        specifier: '>=13'
+        version: 15.4.6(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react:
+        specifier: '>=18'
+        version: 19.1.0
+      react-dom:
+        specifier: '>=18'
+        version: 19.1.0(react@19.1.0)
+    devDependencies:
+      lucide-react:
+        specifier: ^0.446.0
+        version: 0.446.0(react@19.1.0)
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.0(postcss@8.4.31)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.2
+
   packages/css-components: {}
 
   packages/css-core: {}
@@ -279,6 +307,28 @@ importers:
         version: 5.9.2
 
   packages/login-catalog:
+    dependencies:
+      next:
+        specifier: '>=13'
+        version: 15.4.6(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react:
+        specifier: '>=18'
+        version: 19.1.0
+      react-dom:
+        specifier: '>=18'
+        version: 19.1.0(react@19.1.0)
+    devDependencies:
+      lucide-react:
+        specifier: ^0.446.0
+        version: 0.446.0(react@19.1.0)
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.0(postcss@8.4.31)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.2
+
+  packages/modals-catalog:
     dependencies:
       next:
         specifier: '>=13'

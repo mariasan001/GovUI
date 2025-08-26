@@ -27,10 +27,10 @@ export const ITEMS: Item[] = [
   { key: 'calendars', slug: 'calendarios', title: 'Calendarios',         variations: 0,     keywords:['date','calendar'] },
   { key: 'tooltips',  slug: 'tooltips',    title: 'Tooltips',            variations: 14,     keywords:['ayuda','hint'] },
   { key: 'loader',    slug: 'cargador',    title: 'Cargador de página',  variations: 8,     keywords:['spinner','loading'] },
-  { key: 'modals',    slug: 'modales',     title: 'Modales',             variations: 0,     keywords:['dialog','overlay'] },
+  { key: 'modals',    slug: 'modales',     title: 'Modales',             variations: 11,     keywords:['dialog','overlay'] },
   { key: 'lists',     slug: 'listas',      title: 'Listas',              variations: 0,     keywords:['items','ul','ol'] },
-  { key: 'carousels', slug: 'carruseles',  title: 'Carruseles',          variations: 0,     keywords:['carousel','slider'] },
-  { key: 'counters',  slug: 'contadores',  title: 'Contadores',          variations: 0,     keywords:['badge','kpi','metricas'] },
+  { key: 'tablas',    slug: 'tablas',      title: 'tablas',              variations: 0,     keywords:['tablas','table'] },
+  { key: 'counters',  slug: 'contadores',  title: 'Contadores',          variations: 11,     keywords:['badge','kpi','metricas'] },
   { key: 'login',     slug: 'login',       title: 'login',               variations: 1,     keywords:['login', 'iniciar'] },
 ];
 

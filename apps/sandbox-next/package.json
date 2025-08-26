@@ -26,6 +26,9 @@
     "@govui/login-catalog" :"workspace:",
     "@govui/tooltips-catalog":"workspace:*",
     "@govui/forms-catalog": "workspace:",
+    "@govui/counters-catalog": "workspace:",
+    "@govui/modals-catalog": "workspace:",
+    
     "lucide-react": "^0.539.0",
     "next": "15.4.6",
     "react": "19.1.0",
