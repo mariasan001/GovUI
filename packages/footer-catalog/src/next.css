@@ -1,0 +1,116 @@
+:root{
+  /* Paleta GOV */
+  --mx-prim:#7b1e3d;  --mx-prim-10:#671a34;
+  --ink:#1a1a1a;      --muted:#6b7280;
+  --surface:#ffffff;  --surface-2:#f6f7f9;
+  --gold:#b48954;     --gold-2:#d3bf9d;
+  --border:#e5e7eb;   --ring:rgba(123,30,61,.18);
+  
+}
+
+/* Galería */
+.f-shell{ display:grid; gap:24px; }
+.f-section__head h3{ margin:0 0 8px; font-size:12.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.3px; }
+.f-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(420px,1fr)); gap:18px; }
+.f-card{ border:1px solid var(--border); border-radius:16px; background:var(--surface); display:grid; grid-template-rows:1fr auto; box-shadow:0 8px 26px rgba(0,0,0,.05); }
+.f-card__preview{ padding:0; min-height:220px; display:grid; place-items:stretch; }
+.f-card__foot{ display:flex; align-items:center; justify-content:space-between; padding:10px 12px; background:var(--surface-2); border-top:1px solid var(--border); border-radius:0 0 16px 16px; }
+.f-card__label{ font-size:12px; color:var(--muted); }
+.f-copy{ height:30px; padding:0 10px; border-radius:8px; border:1px solid var(--border); background:#fff; cursor:pointer; }
+.f-copy:hover{ background:#f3f4f6; }
+
+/* ====== Footers base ====== */
+.footer{ color:#fff; background:#111; }
+.footer .wrap{ max-width:1200px; margin-inline:auto; padding:24px; display:grid; gap:16px; }
+.footer a{ color:inherit; text-decoration:none; }
+.footer a:hover{ text-decoration:underline; }
+
+/* variantes */
+.footer--light{ color:var(--ink); background:var(--surface); border-top:1px solid var(--border); }
+.footer--brand{ background:linear-gradient(135deg,var(--mx-prim),var(--mx-prim-10)); }
+.footer--sticky{ position:sticky; top:100%; } /* sticky al fondo de la tarjeta demo */
+
+/* layout helpers */
+.f-row{ display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+.f-col{ display:grid; gap:6px; min-width:180px; }
+.f-cols{ display:grid; gap:16px; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); }
+.f-sep{ border-top:1px solid rgba(255,255,255,.15); }
+.f-sep.is-light{ border-top-color:var(--border); }
+.f-legal{ display:flex; gap:12px; flex-wrap:wrap; font-size:12px; color:#d1d5db; }
+.f-legal.is-dark{ color:#4b5563; }
+.f-credit{ font-size:12px; }
+.f-credit b{ color:var(--gold-2); }
+
+/* newsletter */
+.news{ display:flex; gap:8px; flex-wrap:wrap; }
+.news input{ height:38px; padding:0 12px; border-radius:10px; border:1px solid var(--border); background:#fff; min-width:220px; }
+.news button{ height:38px; padding:0 14px; border-radius:10px; border:none; background:var(--mx-prim); color:#fff; cursor:pointer; }
+.news button:hover{ background:var(--mx-prim-10); }
+
+/* chip social */
+.social{ display:flex; gap:8px; }
+.social a{ display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:10px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.18); }
+.footer--light .social a{ background:#fff; border-color:var(--border); }
+
+/* mini kpis */
+.kpis{ display:flex; gap:12px; flex-wrap:wrap; }
+.kpi{ padding:8px 12px; border-radius:10px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.18); color:#fff; font-size:12px; }
+.footer--light .kpi{ background:#fff; border-color:var(--border); color:var(--ink); }
+
+/* responsive */
+@media (max-width:680px){
+  .footer .wrap{ padding:18px; }
+}
+
+
+
+
+/* FullView (modal) */
+.fv{ position: fixed; inset: 0; z-index: 80; display:grid; place-items:center; }
+.fv__overlay{ position:absolute; inset:0; background: rgba(0,0,0,.5); backdrop-filter: blur(2px); }
+.fv__panel{
+  position: relative; inline-size: min(1100px, 96vw); block-size: min(88vh, 900px);
+  background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35); display:flex; flex-direction: column;
+  outline: none;
+}
+.fv__head{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 14px; border-bottom:1px solid var(--border); background:#fafafa; border-radius:16px 16px 0 0; }
+.fv__title{ margin:0; font-size:14px; color:#374151; }
+.fv__close{ height:32px; padding:0 10px; border-radius:8px; border:1px solid var(--border); background:#fff; cursor:pointer; }
+.fv__close:hover{ background:#f3f4f6; }
+
+.fv__content{
+  flex:1; overflow:auto; padding:16px; background:#fff; border-radius:0 0 16px 16px;
+}
+
+/* Botón en la tarjeta */
+.f-view{ height:30px; padding:0 10px; border-radius:8px; border:1px solid var(--border); background:#fff; cursor:pointer; }
+.f-view:hover{ background:#f3f4f6; }
+
+
+
+
+/* La tarjetita de preview debe tener altura fija y scroll */
+.f-card__preview{
+  /* antes: min-height: 220px; */
+  block-size: 240px;
+  overflow: auto;        /* si el contenido es alto, que scrollee */
+  padding: 0;            /* el footer ya trae su propio padding */
+}
+
+/* Evita que el footer “colapse” márgenes y redondea bien */
+.f-card__preview > .footer{
+  margin: 0 !important;
+  border-radius: 16px 16px 0 0;
+}
+
+/* Dentro de la demo no queremos pegajosidades */
+.f-card__preview .footer--sticky{
+  position: static;  /* anula el sticky sólo en la tarjeta demo */
+}
+
+/* Por si alguna imagen o logo crece de más */
+.f-card__preview .footer img{
+  max-width: 100%;
+  height: auto;
+}

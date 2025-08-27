@@ -16,7 +16,7 @@ export const ITEMS: Item[] = [
   { key: 'cards',     slug: 'tarjetas',    title: 'Tarjetas',            variations: 6,     keywords:['card','panel','contenedor'] },
   { key: 'nav',       slug: 'navegacion',  title: 'Navegación',          variations: 4,     keywords:['navbar','menu','tabs'] },
   { key: 'inputs',    slug: 'inputs',      title: 'inputs',              variations: 6,     keywords:['inputs','campo','editable'] },
-  { key: 'footer',    slug: 'pie',         title: 'Pie de página',       variations: 0,     keywords:['footer'] },
+  { key: 'footer',    slug: 'pie',         title: 'Pie de página',       variations: 10,     keywords:['footer'] },
   { key: 'tabs',      slug: 'pestanas',    title: 'Pestañas',            variations: 0,     keywords:['tabs','segmentos'] },
   { key: 'alerts',    slug: 'alertas',     title: 'Alertas',             variations: 0,     keywords:['notificaciones','estado'] },
   { key: 'buttons',   slug: 'botones',     title: 'Botones',             variations: 8,     keywords:['cta','acciones'] },
@@ -110,3 +110,4 @@ export default function Page() {
     </main>
   );
 }
+

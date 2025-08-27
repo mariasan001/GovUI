@@ -16,7 +16,8 @@ import ChartsLoader from "./ChartsLoader.client";
 import CountersLoader from "./CountersLoader.client";
 import ModalsLoader from "./ModalsLoader.client";
 import TablesLoader from "./tableLoader.client";
-import { ListasShowcase } from "@/features/listas";
+import { ListasShowcase } from "@govui/listas-catalog/next";
+import FooterLoader from "./FoonterLoader.client";
 
 type Props = { params: { slug: string } };
 export function generateStaticParams() {
@@ -44,7 +45,7 @@ export default function Page({ params }: Props) {
   if    (  params.slug === "modales"    )    return    <ModalsLoader />;
   if    (  params.slug === "tablas"     )    return    <TablesLoader />;
   if    (  params.slug === "listas"     )    return    <ListasShowcase/>;
-  
+  if    (  params.slug === "pie"        )    return     <FooterLoader />
   
   return (
     <main
