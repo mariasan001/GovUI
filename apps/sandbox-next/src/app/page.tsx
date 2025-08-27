@@ -29,7 +29,7 @@ export const ITEMS: Item[] = [
   { key: 'loader',    slug: 'cargador',    title: 'Cargador de página',  variations: 8,     keywords:['spinner','loading'] },
   { key: 'modals',    slug: 'modales',     title: 'Modales',             variations: 11,     keywords:['dialog','overlay'] },
   { key: 'lists',     slug: 'listas',      title: 'Listas',              variations: 0,     keywords:['items','ul','ol'] },
-  { key: 'tablas',    slug: 'tablas',      title: 'tablas',              variations: 0,     keywords:['tablas','table'] },
+  { key: 'tablas',    slug: 'tablas',      title: 'tablas',              variations: 4,     keywords:['tablas','table'] },
   { key: 'counters',  slug: 'contadores',  title: 'Contadores',          variations: 11,     keywords:['badge','kpi','metricas'] },
   { key: 'login',     slug: 'login',       title: 'login',               variations: 1,     keywords:['login', 'iniciar'] },
 ];

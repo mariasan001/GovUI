@@ -28,6 +28,7 @@
     "@govui/forms-catalog": "workspace:",
     "@govui/counters-catalog": "workspace:",
     "@govui/modals-catalog": "workspace:",
+    "@govui/tables-catalog": "workspace:",
     
     "lucide-react": "^0.539.0",
     "next": "15.4.6",

@@ -15,6 +15,7 @@ import FormsLoader from "./FormsLoader.client";
 import ChartsLoader from "./ChartsLoader.client";
 import CountersLoader from "./CountersLoader.client";
 import ModalsLoader from "./ModalsLoader.client";
+import TablesLoader from "./tableLoader.client";
 
 type Props = { params: { slug: string } };
 export function generateStaticParams() {
@@ -23,22 +24,26 @@ export function generateStaticParams() {
 
 export default function Page({ params }: Props) {
   const item = ITEMS.find((i) => i.slug === params.slug);
-      if (!item) notFound();
-      if (params.slug === "iconos") return <IconosLoader />;
-      if (params.slug === "colores") return <ColoresLoader />;
-      if (params.slug === "tipografia") return <TipografiaLoader />;
-      if (params.slug === "tarjetas") return <TarjetasLoader />;
-      if (params.slug === "botones") return <ButtonsShowcase />;
-      if (params.slug === "inputs") return <InputsLoader />;
-      if (params.slug === "navegacion") return <NavLoader />;
-      if (params.slug === "cargador") return <LoadersLoader />;
-      if (params.slug === "login") return <LoginLoader />;
-      if (params.slug === "tooltips") return <TooltipsLoader />;
-      if (params.slug === "formularios") return <FormsLoader />;
-      if (params.slug === "graficas") return <ChartsLoader />; 
-      if (params.slug === "contadores") return <CountersLoader />;
-      if (params.slug === "modales") return <ModalsLoader />;
+  if (!item) notFound();
 
+
+  if    (  params.slug === "iconos"     )    return    <IconosLoader />;
+  if    (  params.slug === "colores"    )    return    <ColoresLoader />;
+  if    (  params.slug === "tipografia" )    return    <TipografiaLoader />;
+  if    (  params.slug === "tarjetas"   )    return    <TarjetasLoader />;
+  if    (  params.slug === "botones"    )    return    <ButtonsShowcase />;
+  if    (  params.slug === "inputs"     )    return    <InputsLoader />;
+  if    (  params.slug === "navegacion" )    return    <NavLoader />;
+  if    (  params.slug === "cargador"   )    return    <LoadersLoader />;
+  if    (  params.slug === "login"      )    return    <LoginLoader />;
+  if    (  params.slug === "tooltips"   )    return    <TooltipsLoader />;
+  if    (  params.slug === "formularios")    return    <FormsLoader />;
+  if    (  params.slug === "graficas"   )    return    <ChartsLoader />;
+  if    (  params.slug === "contadores" )    return    <CountersLoader />;
+  if    (  params.slug === "modales"    )    return    <ModalsLoader />;
+  if    (  params.slug === "tablas"     )    return    <TablesLoader />;
+
+  
   return (
     <main
       className="u-container u-stack"
