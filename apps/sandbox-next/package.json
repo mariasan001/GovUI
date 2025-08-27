@@ -29,6 +29,8 @@
     "@govui/counters-catalog": "workspace:",
     "@govui/modals-catalog": "workspace:",
     "@govui/tables-catalog": "workspace:",
+    "@govui/listas-catalog": "workspace:",
+    "@govui/charts-catalog": "workspace:*",
     
     "lucide-react": "^0.539.0",
     "next": "15.4.6",

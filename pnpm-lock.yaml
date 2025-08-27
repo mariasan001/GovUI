@@ -36,6 +36,9 @@ importers:
       '@govui/cards-catalog':
         specifier: workspace:*
         version: link:../../packages/cards-catalog
+      '@govui/charts-catalog':
+        specifier: workspace:*
+        version: link:../../packages/charts-catalog
       '@govui/colors-catalog':
         specifier: workspace:*
         version: link:../../packages/colors-catalog
@@ -63,6 +66,9 @@ importers:
       '@govui/inputs-catalog':
         specifier: 'workspace:'
         version: link:../../packages/inputs-catalog
+      '@govui/listas-catalog':
+        specifier: 'workspace:'
+        version: link:../../packages/list-catalog
       '@govui/loaders-catalog':
         specifier: 'workspace:'
         version: link:../../packages/loaders-catalog
@@ -175,6 +181,28 @@ importers:
         specifier: ^5.5.4
         version: 5.9.2
 
+  packages/charts-catalog:
+    dependencies:
+      next:
+        specifier: '>=13'
+        version: 15.4.6(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react:
+        specifier: '>=18'
+        version: 19.1.0
+      react-dom:
+        specifier: '>=18'
+        version: 19.1.0(react@19.1.0)
+    devDependencies:
+      lucide-react:
+        specifier: ^0.446.0
+        version: 0.446.0(react@19.1.0)
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.0(postcss@8.4.31)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.2
+
   packages/colors-catalog:
     dependencies:
       lucide-react:
@@ -266,6 +294,28 @@ importers:
         version: 5.9.2
 
   packages/inputs-catalog:
+    dependencies:
+      next:
+        specifier: '>=13'
+        version: 15.4.6(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react:
+        specifier: '>=18'
+        version: 19.1.0
+      react-dom:
+        specifier: '>=18'
+        version: 19.1.0(react@19.1.0)
+    devDependencies:
+      lucide-react:
+        specifier: ^0.446.0
+        version: 0.446.0(react@19.1.0)
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.0(postcss@8.4.31)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.2
+
+  packages/list-catalog:
     dependencies:
       next:
         specifier: '>=13'
