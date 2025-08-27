@@ -18,6 +18,7 @@ import ModalsLoader from "./ModalsLoader.client";
 import TablesLoader from "./tableLoader.client";
 import { ListasShowcase } from "@govui/listas-catalog/next";
 import FooterLoader from "./FoonterLoader.client";
+import TabsLoader from "./tabsLoader.client";
 
 type Props = { params: { slug: string } };
 export function generateStaticParams() {
@@ -46,7 +47,7 @@ export default function Page({ params }: Props) {
   if    (  params.slug === "tablas"     )    return    <TablesLoader />;
   if    (  params.slug === "listas"     )    return    <ListasShowcase/>;
   if    (  params.slug === "pie"        )    return     <FooterLoader />
-  
+  if    (  params.slug === "pestanas"   )    return     <TabsLoader/>
   return (
     <main
       className="u-container u-stack"
