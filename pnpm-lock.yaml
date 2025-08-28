@@ -30,9 +30,15 @@ importers:
 
   apps/sandbox-next:
     dependencies:
+      '@govui/alerts-catalog':
+        specifier: workspace:*
+        version: link:../../packages/alerts-catalog
       '@govui/buttons-catalog':
         specifier: workspace:^
         version: link:../../packages/buttons-catalog
+      '@govui/calendars-catalog':
+        specifier: workspace:*
+        version: link:../../packages/calendars-catalog
       '@govui/cards-catalog':
         specifier: workspace:*
         version: link:../../packages/cards-catalog
@@ -42,6 +48,9 @@ importers:
       '@govui/colors-catalog':
         specifier: workspace:*
         version: link:../../packages/colors-catalog
+      '@govui/containers-catalog':
+        specifier: workspace:*
+        version: link:../../packages/containers-catalog
       '@govui/counters-catalog':
         specifier: 'workspace:'
         version: link:../../packages/counters-catalog
@@ -84,6 +93,9 @@ importers:
       '@govui/nav-catalog':
         specifier: 'workspace:'
         version: link:../../packages/nav-catalog
+      '@govui/search-catalog':
+        specifier: 'workspace:'
+        version: link:../../packages/search-catalog
       '@govui/tables-catalog':
         specifier: 'workspace:'
         version: link:../../packages/tables-catalog
@@ -111,6 +123,12 @@ importers:
       react-dom:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
+      react-grid-layout:
+        specifier: ^1.5.2
+        version: 1.5.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react-resizable:
+        specifier: ^3.0.5
+        version: 3.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       sonner:
         specifier: ^2.0.7
         version: 2.0.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -127,6 +145,12 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.1.7(@types/react@19.1.10)
+      '@types/react-grid-layout':
+        specifier: ^1.3.5
+        version: 1.3.5
+      '@types/react-resizable':
+        specifier: ^3.0.8
+        version: 3.0.8
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.4.31)
@@ -146,6 +170,31 @@ importers:
         specifier: ^5
         version: 5.9.2
 
+  packages/alerts-catalog:
+    dependencies:
+      next:
+        specifier: '>=13'
+        version: 15.4.6(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react:
+        specifier: '>=18'
+        version: 19.1.0
+      react-dom:
+        specifier: '>=18'
+        version: 19.1.0(react@19.1.0)
+      sonner:
+        specifier: ^2.0.7
+        version: 2.0.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+    devDependencies:
+      lucide-react:
+        specifier: ^0.446.0
+        version: 0.446.0(react@19.1.0)
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.0(postcss@8.4.31)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.2
+
   packages/buttons-catalog:
     dependencies:
       next:
@@ -157,6 +206,34 @@ importers:
       react-dom:
         specifier: '>=18'
         version: 19.1.0(react@19.1.0)
+    devDependencies:
+      lucide-react:
+        specifier: ^0.446.0
+        version: 0.446.0(react@19.1.0)
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.0(postcss@8.4.31)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.2
+
+  packages/calendars-catalog:
+    dependencies:
+      next:
+        specifier: '>=13'
+        version: 15.4.6(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react:
+        specifier: '>=18'
+        version: 19.1.0
+      react-dom:
+        specifier: '>=18'
+        version: 19.1.0(react@19.1.0)
+      react-grid-layout:
+        specifier: '>=1.4.4'
+        version: 1.5.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react-resizable:
+        specifier: '>=3.0.5'
+        version: 3.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     devDependencies:
       lucide-react:
         specifier: ^0.446.0
@@ -229,6 +306,34 @@ importers:
         version: 8.5.0(postcss@8.4.31)(typescript@5.9.2)
       typescript:
         specifier: ^5.5.4
+        version: 5.9.2
+
+  packages/containers-catalog:
+    dependencies:
+      next:
+        specifier: '>=13'
+        version: 15.4.6(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react:
+        specifier: '>=18'
+        version: 19.1.0
+      react-dom:
+        specifier: '>=18'
+        version: 19.1.0(react@19.1.0)
+      react-grid-layout:
+        specifier: '>=1.4.4'
+        version: 1.5.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react-resizable:
+        specifier: '>=3.0.5'
+        version: 3.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+    devDependencies:
+      lucide-react:
+        specifier: ^0.446.0
+        version: 0.446.0(react@19.1.0)
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.0(postcss@8.4.31)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.6.0
         version: 5.9.2
 
   packages/counters-catalog:
@@ -435,6 +540,28 @@ importers:
         version: 5.9.2
 
   packages/nav-catalog:
+    dependencies:
+      next:
+        specifier: '>=13'
+        version: 15.4.6(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react:
+        specifier: '>=18'
+        version: 19.1.0
+      react-dom:
+        specifier: '>=18'
+        version: 19.1.0(react@19.1.0)
+    devDependencies:
+      lucide-react:
+        specifier: ^0.446.0
+        version: 0.446.0(react@19.1.0)
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.0(postcss@8.4.31)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.2
+
+  packages/search-catalog:
     dependencies:
       next:
         specifier: '>=13'
@@ -1181,6 +1308,12 @@ packages:
     peerDependencies:
       '@types/react': ^19.0.0
 
+  '@types/react-grid-layout@1.3.5':
+    resolution: {integrity: sha512-WH/po1gcEcoR6y857yAnPGug+ZhkF4PaTUxgAbwfeSH/QOgVSakKHBXoPGad/sEznmkiaK3pqHk+etdWisoeBQ==}
+
+  '@types/react-resizable@3.0.8':
+    resolution: {integrity: sha512-Pcvt2eGA7KNXldt1hkhVhAgZ8hK41m0mp89mFgQi7LAAEZiaLgm4fHJ5zbJZ/4m2LVaAyYrrRRv1LHDcrGQanA==}
+
   '@types/react@19.1.10':
     resolution: {integrity: sha512-EhBeSYX0Y6ye8pNebpKrwFJq7BoQ8J5SO6NlvNwwHjSj6adXJViPQrKlsyPw7hLBLvckEMO1yxeGdR82YBBlDg==}
 
@@ -1827,6 +1960,9 @@ packages:
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
 
+  fast-equals@4.0.3:
+    resolution: {integrity: sha512-G3BSX9cfKttjr+2o1O22tYMLq0DPluZnYtq1rXumE1SpL/F/SLIfHx08WYQoWSIpeMYf8sRbJ8++71+v6Pnxfg==}
+
   fast-glob@3.3.1:
     resolution: {integrity: sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==}
     engines: {node: '>=8.6.0'}
@@ -2427,6 +2563,18 @@ packages:
     peerDependencies:
       react: ^19.1.0
 
+  react-draggable@4.5.0:
+    resolution: {integrity: sha512-VC+HBLEZ0XJxnOxVAZsdRi8rD04Iz3SiiKOoYzamjylUcju/hP9np/aZdLHf/7WOD268WMoNJMvYfB5yAK45cw==}
+    peerDependencies:
+      react: '>= 16.3.0'
+      react-dom: '>= 16.3.0'
+
+  react-grid-layout@1.5.2:
+    resolution: {integrity: sha512-vT7xmQqszTT+sQw/LfisrEO4le1EPNnSEMVHy6sBZyzS3yGkMywdOd+5iEFFwQwt0NSaGkxuRmYwa1JsP6OJdw==}
+    peerDependencies:
+      react: '>= 16.3.0'
+      react-dom: '>= 16.3.0'
+
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -2441,6 +2589,11 @@ packages:
         optional: true
       redux:
         optional: true
+
+  react-resizable@3.0.5:
+    resolution: {integrity: sha512-vKpeHhI5OZvYn82kXOs1bC8aOXktGU5AmKAgaZS4F5JPburCtbmDPqE7Pzp+1kN4+Wb81LlF33VpGwWwtXem+w==}
+    peerDependencies:
+      react: '>= 16.3'
 
   react@19.1.0:
     resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
@@ -2476,6 +2629,9 @@ packages:
 
   reselect@5.1.1:
     resolution: {integrity: sha512-K/BG6eIky/SBpzfHZv/dd+9JBFiS4SWV7FIujVyJRux6e45+73RaUHXLmIR1f7WOMaQ0U1km6qwklRQxpJJY0w==}
+
+  resize-observer-polyfill@1.5.1:
+    resolution: {integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==}
 
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -3298,6 +3454,14 @@ snapshots:
     dependencies:
       '@types/react': 19.1.10
 
+  '@types/react-grid-layout@1.3.5':
+    dependencies:
+      '@types/react': 19.1.10
+
+  '@types/react-resizable@3.0.8':
+    dependencies:
+      '@types/react': 19.1.10
+
   '@types/react@19.1.10':
     dependencies:
       csstype: 3.1.3
@@ -4115,6 +4279,8 @@ snapshots:
 
   fast-deep-equal@3.1.3: {}
 
+  fast-equals@4.0.3: {}
+
   fast-glob@3.3.1:
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -4715,6 +4881,24 @@ snapshots:
       react: 19.1.0
       scheduler: 0.26.0
 
+  react-draggable@4.5.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      clsx: 2.1.1
+      prop-types: 15.8.1
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+
+  react-grid-layout@1.5.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      clsx: 2.1.1
+      fast-equals: 4.0.3
+      prop-types: 15.8.1
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+      react-draggable: 4.5.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react-resizable: 3.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      resize-observer-polyfill: 1.5.1
+
   react-is@16.13.1: {}
 
   react-redux@9.2.0(@types/react@19.1.10)(react@19.1.0)(redux@5.0.1):
@@ -4725,6 +4909,14 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.1.10
       redux: 5.0.1
+
+  react-resizable@3.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      prop-types: 15.8.1
+      react: 19.1.0
+      react-draggable: 4.5.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+    transitivePeerDependencies:
+      - react-dom
 
   react@19.1.0: {}
 
@@ -4777,6 +4969,8 @@ snapshots:
       set-function-name: 2.0.2
 
   reselect@5.1.1: {}
+
+  resize-observer-polyfill@1.5.1: {}
 
   resolve-from@4.0.0: {}
 

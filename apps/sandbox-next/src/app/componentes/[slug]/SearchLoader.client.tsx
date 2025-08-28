@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 
 const SearchShowcase = dynamic(
-  () => import("@features/search").then(m => m.SearchShowcase),
+  () => import("@govui/search-catalog/next").then(m => m.SearchShowcase),
   { ssr:false, loading: () => <div className="demo-card">Cargando buscadores…</div> }
 );
 

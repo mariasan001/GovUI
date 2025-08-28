@@ -4,7 +4,7 @@
 import dynamic from "next/dynamic";
 
 const CalendarsShowcase = dynamic(
-  () => import("@features/calendars").then(m => m.CalendarsShowcase),
+  () => import("@govui/calendars-catalog/next").then(m => m.CalendarsShowcase),
   { ssr:false, loading: () => <div className="demo-card">Cargando calendarios…</div> }
 );
 

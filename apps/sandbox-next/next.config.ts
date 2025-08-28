@@ -21,6 +21,10 @@ const nextConfig: NextConfig = {
     "@govui/charts-catalog",
     "@govui/footer-catalog",
     "@govui/tabs-catalog",
+    "@containers-catalog",
+    "@alert-catalog",
+    "@govui/calendars-catalog",
+    "@govui/search-catalog",
   ],
   experimental: {
     // Tree-shake más fino para lucide

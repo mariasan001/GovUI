@@ -22,6 +22,7 @@ import TabsLoader from "./tabsLoader.client";
 import CalendarsLoader from "./CalendarsLoader.client";
 import SearchLoader from "./SearchLoader.client";
 import AlertLoader from "./alertLoader.client";
+import ContainersLoader from "./ContainersLoader";
 
 type Props = { params: { slug: string } };
 export function generateStaticParams() {
@@ -54,6 +55,7 @@ export default function Page({ params }: Props) {
   if    (  params.slug === "calendarios")    return     <CalendarsLoader/>;
   if    (  params.slug === "buscador"   )    return     <SearchLoader/>;
   if    (  params.slug === "alertas"    )    return     <AlertLoader/>;
+  if    (  params.slug === "layout"     )    return     <ContainersLoader/>
 
   return (
     <main
