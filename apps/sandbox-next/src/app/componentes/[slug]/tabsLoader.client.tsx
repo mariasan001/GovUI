@@ -4,7 +4,7 @@
 import dynamic from "next/dynamic";
 
 const TabsShowcase = dynamic(
-  () => import("@features/tabs").then(m => m.TabsShowcase),
+  () => import("@govui/tabs-catalog/next").then(m => m.TabsShowcase),
   { ssr: false, loading: () => <div className="demo-card">Cargando pies de página…</div> }
 );
 

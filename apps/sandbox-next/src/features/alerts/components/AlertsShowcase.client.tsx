@@ -1,13 +1,12 @@
-// apps/sandbox-next/src/features/tabs/components/TabsShowcase.client.tsx
 "use client";
 
-import "./tabas.css";
+import "./alerts.css";
+import { useState } from "react";
 import { VARIANTS } from "../variants";
 import { GRUPOS as GROUPS } from "../variants/types";
-import { useState } from "react";
-import FullView from "./_share/FullView.client";
-import InteractiveTabs from "./InteractiveTabs.client";
 
+import InteractiveAlerts from "./InteractiveAlerts.client";
+import FullView from "@/features/footer/components/_share/FullView.client";
 
 function CopyBtn({ code }: { code: string }) {
   const [ok, setOk] = useState(false);
@@ -21,28 +20,28 @@ function CopyBtn({ code }: { code: string }) {
     }
     setOk(true); setTimeout(() => setOk(false), 900);
   }
-  return <button className="tb-copy" onClick={copy}>{ok ? "¡Copiado ✓!" : "Copiar .tsx"}</button>;
+  return <button className="a-copy" onClick={copy}>{ok ? "¡Copiado ✓!" : "Copiar .tsx"}</button>;
 }
 
-export function TabsShowcase(){
+export function AlertsShowcase(){
   const [openId, setOpenId] = useState<string | null>(null);
 
   return (
-    <main className="tb-shell u-container">
+    <main className="a-shell u-container">
       {GROUPS.map(g=>{
         const items = VARIANTS.filter(v=>v.idGrupo===g.id);
         if(!items.length) return null;
         return (
-          <section key={g.id} className="tb-section">
-            <header className="tb-section__head"><h3>{g.titulo}</h3></header>
-            <div className="tb-grid">
+          <section key={g.id} className="a-section">
+            <header className="a-section__head"><h3>{g.titulo}</h3></header>
+            <div className="a-grid">
               {items.map(v=>(
-                <article key={v.id} className="tb-card">
-                  <div className="tb-card__preview">{v.vistaPrevia}</div>
-                  <footer className="tb-card__foot">
-                    <span className="tb-card__label">{v.etiqueta}</span>
+                <article key={v.id} className="a-card">
+                  <div className="a-card__preview">{v.vistaPrevia}</div>
+                  <footer className="a-card__foot">
+                    <span className="a-card__label">{v.etiqueta}</span>
                     <div style={{display:"flex", gap:8}}>
-                      <button className="tb-view" onClick={()=>setOpenId(v.id)}>Ver completo</button>
+                      <button className="a-view" onClick={()=>setOpenId(v.id)}>Ver completo</button>
                       <CopyBtn code={v.tsx}/>
                     </div>
                   </footer>
@@ -52,8 +51,7 @@ export function TabsShowcase(){
                     onClose={()=>setOpenId(null)}
                     title={`Vista completa · ${v.etiqueta}`}
                   >
-                    {/* Vista interactiva según la variante */}
-                    <InteractiveTabs variantId={v.id}/>
+                    <InteractiveAlerts variantId={v.id}/>
                   </FullView>
                 </article>
               ))}

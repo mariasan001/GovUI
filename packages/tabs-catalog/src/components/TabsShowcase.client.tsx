@@ -1,7 +1,6 @@
 // apps/sandbox-next/src/features/tabs/components/TabsShowcase.client.tsx
 "use client";
 
-import "./tabas.css";
 import { VARIANTS } from "../variants";
 import { GRUPOS as GROUPS } from "../variants/types";
 import { useState } from "react";
